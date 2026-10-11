@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Case of the Missing Heart ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: #160e20;
+  color: #fff0f5;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+main {
+  max-width: 520px;
+  margin: 25px auto;
+  padding: 25px 20px;
+  background: #29182f;
+  border: 1px solid #d99ab9;
+  border-radius: 18px;
+}
+h1 { color: #ff9fca; }
+h2 { color: #ffd2e5; }
+p { line-height: 1.7; }
+button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #e879ad;
+  color: #240e20;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #ffb6d5; }
+.hidden { display: none; }
+.heart { font-size: 55px; }
+.small { color: #d7b9cf; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="heart">🔎 ❤️</div>
+  <h1>The Case of the Missing Heart</h1>
+  <p>A secret case has arrived, Detective Wijdane.</p>
+  <p>One heart has disappeared. Three clues remain.
+  Your mission is to discover where it went.</p>
+
+  <section id="start">
+    <h2>Case File No. 001</h2>
+    <p>Suspect: Someone who smiles whenever your name appears.</p>
+    <p>Evidence: A thousand little moments, a warm feeling,
+    and a message that has never been fully explained.</p>
+    <button onclick="show('clue1')">Open the first clue</button>
+  </section>
+
+  <section id="clue1" class="hidden">
+    <h2>Clue 1: The Message 📜</h2>
+    <p>The missing heart was last seen near someone whose
+    presence can make an ordinary day feel special.</p>
+    <p>What should a good detective follow?</p>
+    <button onclick="show('wrong1')">The footprints</button>
+    <button onclick="show('clue2')">The feelings behind the evidence ❤️</button>
+  </section>
+
+  <section id="wrong1" class="hidden">
+    <h2>Not quite, Detective! 🕵️</h2>
+    <p>Footprints disappear, but meaningful moments can stay
+    in the heart. Look a little closer.</p>
+    <button onclick="show('clue1')">Try again</button>
+  </section>
+
+  <section id="clue2" class="hidden">
+    <h2>Clue 2: The Witness 🌙</h2>
+    <p>A witness reports that the suspect never needed a
+    special occasion to appreciate Wijdane. Even the little
+    things about her mattered.</p>
+    <p>What is the strongest evidence of appreciation?</p>
+    <button onclick="show('wrong2')">A beautiful gift alone</button>
+    <button onclick="show('clue3')">Sincere words and genuine care</button>
+  </section>
+
+  <section id="wrong2" class="hidden">
+    <h2>Look beyond the obvious 💌</h2>
+    <p>Gifts can be lovely, but sincere appreciation comes
+    from the heart.</p>
+    <button onclick="show('clue2')">Re-examine the clue</button>
+  </section>
+
+  <section id="clue3" class="hidden">
+    <h2>Clue 3: The Final Question 🔐</h2>
+    <p>The last note says: “The missing heart was never stolen.
+    It simply found someone worth appreciating.”</p>
+    <p>Who could have written this secret note?</p>
+    <button onclick="show('ending')">Someone with something heartfelt to say ❤️</button>
+  </section>
+
+  <section id="ending" class="hidden">
+    <div class="heart">💗</div>
+    <h2>CASE CLOSED</h2>
+    <p>Dear Wijdane,</p>
+    <p>If you have reached this page, you have solved the mystery.
+    But the most important discovery is still waiting for you.</p>
+    <p>I made this little case for you because I wanted to remind
+    you that you are appreciated more than a simple message can say.</p>
+    <p>Your presence, your personality, and the little things that
+    make you who you are deserve to be appreciated. Thank you for
+    being yourself and for bringing your own kind of light into
+    the world.</p>
+    <p>I hope this little surprise makes you smile, because you
+    deserve kind words and beautiful moments.</p>
+    <h2>With appreciation,</h2>
+    <h1>Mohamed ❤️</h1>
+    <p class="small">Some mysteries end with an answer.
+    This one ends with a heartfelt message.</p>
+    <button onclick="location.reload()">Play the mystery again</button>
+  </section>
+</main>
+<script>
+function show(id) {
+  document.querySelectorAll('main section').forEach(function(s) {
+    s.classList.add('hidden');
+  });
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</body>
+</html>
